@@ -10,6 +10,10 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link rel="stylesheet" href="<%=request.getContextPath()%>/css/reset.css">
+        <link rel="stylesheet" href="<%=request.getContextPath()%>/css/styleMain.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Lexend+Mega&display=swap" rel="stylesheet">
         <title>
             <%
                 if (request.getParameter("title") == null) {
@@ -21,12 +25,18 @@
         </title>
     </head>
     <body>
-        <h1>Submited data:</h1>
+        <h1>Submited data</h1>
         <% DemoData data = (DemoData) request.getAttribute("data");%>
-        <p><%=data%></p>
-
+        <p>Name: <%=data.getName()%></p>
+        <p>Surname: <%=data.getSurname()%></p>
+        <p>Gender: <%=data.getGender()%></p>
+        <p>Languages: <%=data.getLanguage()%></p>
+        <p>Country: <%=data.getCountry()%></p>
+        <p>Programming Languages: <%=data.getProgLanguage()%></p>
+        
+        
         <form action = "<%=request.getContextPath()%>">
-            <input type="submit" value="Return to main page"/>
+            <input class="b1" type="submit" value="Return to main page"/>
         </form>
     </body>
 </html>

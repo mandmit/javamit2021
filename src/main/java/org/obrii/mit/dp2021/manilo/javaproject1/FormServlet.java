@@ -77,7 +77,8 @@ public class FormServlet extends HttpServlet {
             request.getParameter("surname"),
             request.getParameter("gender"),
             request.getParameterValues("language"),
-            request.getParameter("country")
+            request.getParameter("country"),
+            request.getParameterValues("proglanguage")
         );
         request.setAttribute("data", data);
         request.getRequestDispatcher("submit.jsp").forward(request, response);
