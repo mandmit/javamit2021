@@ -61,12 +61,11 @@
             Programming Languages:
                 </div>
                 <div>
-                    <input type="checkbox" name="proglanguage" value="English"/>Python
-                    <input type="checkbox" name="proglanguage" value="Ukraine"/>C#
-                    <input type="checkbox" name="proglanguage" value="Japan"/>C++
-                    <input type="checkbox" name="proglanguage" value="Japan"/>C
-                    <input type="checkbox" name="proglanguage" value="Japan"/>JavaScript
-                    <input type="checkbox" name="proglanguage" value="French"/>Java <br>
+                    <input type="checkbox" name="proglanguage" value="Python"/>Python
+                    <input type="checkbox" name="proglanguage" value="C#"/>C#
+                    <input type="checkbox" name="proglanguage" value="C++"/>C++
+                    <input type="checkbox" name="proglanguage" value="C"/>C
+                    <input type="checkbox" name="proglanguage" value="Java"/>Java <br>
                 </div>
                 </div>
             

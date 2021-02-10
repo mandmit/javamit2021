@@ -62,8 +62,12 @@ p{
     margin: 30px 0 30px 0;
 }
 
-.btns, .languages{
+.btns{
     display: flex;
     margin: 20px;
 }
 
+.languages{
+    display: flex;
+    flex-direction: column;
+}
