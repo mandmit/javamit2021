@@ -4,6 +4,7 @@
     Author     : Дмитрий
 --%>
 
+<%@page import="org.obrii.mit.dp2021.manilo.javaproject1.DemoData"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -20,23 +21,12 @@
         </title>
     </head>
     <body>
-        <h1>Result</h1>
-        Name:<%=request.getParameter("name")%><br>
-        Gender:<%=request.getParameter("gender")%><br>
-        Languages:<%
-            String[] lang = request.getParameterValues("language");
-            if (lang != null) {
-                for (int i = 0; i < lang.length; i++) {
-                    out.print("<br>");
-                    out.print(lang[i]);
-                }
-            } else {
-                out.print("Name Selected");
-            }
-        %><br>
+        <h1>Submited data:</h1>
+        <% DemoData data = (DemoData) request.getAttribute("data");%>
+        <p><%=data%></p>
 
-        Country:<%=request.getParameter("country")%><br>
-
-        <a href="<%=request.getContextPath()%>">Return</a>
+        <form action = "<%=request.getContextPath()%>">
+            <input type="submit" value="Return to main page"/>
+        </form>
     </body>
 </html>

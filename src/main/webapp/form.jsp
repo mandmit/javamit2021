@@ -21,12 +21,14 @@
     </head>
     <body>
         <h1>Simple form</h1>
-        <form action="submit.jsp" method="post">
+        <form action="<%= request.getContextPath()%>/form" method="post">
 
             <input type="hidden" name="title" value="Submited"/>
 
-            Full name: <input type="text" name="name"/><br>
+            Name: <input type="text" name="name"/><br>
 
+            Surname: <input type="text" name="surname"/><br>
+            
             Gender:
             <input type="radio" name="gender" value="male"/>Male
             <input type="radio" name="gender" value="female"/>Female <br>
