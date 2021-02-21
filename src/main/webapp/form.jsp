@@ -79,6 +79,11 @@
                 <option value="Argentina">Argentina</option>
             </select><br>
             </div>
+            
+            <div>
+                Do you know about Cachi?
+                <input type="checkbox" name="isKnow" value="on">
+            </div>
 
             <div class="bnts">
             <input class="b1" type="submit" value="Submit">

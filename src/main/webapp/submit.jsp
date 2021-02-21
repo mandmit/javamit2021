@@ -4,7 +4,9 @@
     Author     : Дмитрий
 --%>
 
-<%@page import="org.obrii.mit.dp2021.manilo.javaproject1.DemoData"%>
+<%@page import="org.obrii.mit.dp2021.manilo.javaproject1.User"%>
+<%@page import="org.obrii.mit.dp2021.manilo.javaproject1.NewInterface"%>
+<%@page import="org.obrii.mit.dp2021.manilo.javaproject1.Application"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -26,13 +28,14 @@
     </head>
     <body>
         <h1>Submited data</h1>
-        <% DemoData data = (DemoData) request.getAttribute("data");%>
-        <p>Name: <%=data.getName()%></p>
-        <p>Surname: <%=data.getSurname()%></p>
-        <p>Gender: <%=data.getGender()%></p>
-        <p>Languages: <%=data.getLanguage()%></p>
-        <p>Country: <%=data.getCountry()%></p>
-        <p>Programming Languages: <%=data.getProgLanguage()%></p>
+        <% User user = (User) request.getAttribute("user");%>
+        <p>Name: <%=user.getName()%></p>
+        <p>Surname: <%=user.getSurname()%></p>
+        <p>Gender: <%=user.getGender()%></p>
+        <p>Languages: <%=user.getLanguage()%></p>
+        <p>Country: <%=user.getCountry()%></p>
+        <p>Programming Languages: <%=user.getProgLanguage()%></p
+        <p>LoverCachi:<%=user.getIsKnow()%></p>
         
         
         <form action = "<%=request.getContextPath()%>">
