@@ -86,11 +86,9 @@ public class User implements NewInterface{
     
     @Override
     public String getIsKnow() {
-        String word;
         if(know){
-            word = "You know";
-        }else word = "You don`t know";
-        return word;
+            return "You know and you are awesome";
+        }else return "You don`t know";
     }
 
     @Override

@@ -74,7 +74,7 @@ public class FormServlet extends HttpServlet {
             throws ServletException, IOException {
         Application user = new AdminApp();
         
-        if(request.getParameter("haveRights")!=null) {
+        if(request.getParameter("isKnow")!=null) {
             user.setUser(request, true);
         }
         else user.setUser(request);

@@ -22,7 +22,7 @@ public class AdminApp extends Application{
         request.getParameter("gender"),
         request.getParameterValues("language"),
         request.getParameterValues("proglanguage"),
-        request.getParameter("country"),false);
+        request.getParameter("country"),isKnow);
     }
     
 }

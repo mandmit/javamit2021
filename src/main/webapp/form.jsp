@@ -31,11 +31,11 @@
             <input type="hidden" name="title" value="Submited"/>
             
             <div class="name">
-                Name: <input class="b3" type="text" name="name"/><br>
+                Name: <input class="b3" type="text" name="name" placeholder="Your name is "/><br>
             </div>
             
             <div class="name">
-                Surname: <input class="b3" type="text" name="surname"/><br>
+                Surname: <input class="b3" type="text" name="surname" placeholder="Your surname is "/><br>
             </div>
             
             <div class="name">
@@ -81,7 +81,7 @@
             </div>
             
             <div>
-                Do you know about Cachi?
+                Do you know about Tesla Company?
                 <input type="checkbox" name="isKnow" value="on">
             </div>
 

@@ -28,14 +28,16 @@
     </head>
     <body>
         <h1>Submited data</h1>
-        <% User user = (User) request.getAttribute("user");%>
-        <p>Name: <%=user.getName()%></p>
-        <p>Surname: <%=user.getSurname()%></p>
-        <p>Gender: <%=user.getGender()%></p>
-        <p>Languages: <%=user.getLanguage()%></p>
-        <p>Country: <%=user.getCountry()%></p>
-        <p>Programming Languages: <%=user.getProgLanguage()%></p
-        <p>LoverCachi:<%=user.getIsKnow()%></p>
+        <% Application user = (Application)request.getAttribute("user");
+        NewInterface info = user.getUser();
+        %>
+        <p>Name: <%=info.getName()%></p>
+        <p>Surname: <%=info.getSurname()%></p>
+        <p>Gender: <%=info.getGender()%></p>
+        <p>Languages: <%=info.getLanguage()%></p>
+        <p>Country: <%=info.getCountry()%></p>
+        <p>Programming Languages: <%=info.getProgLanguage()%></p
+        <p>LoverTesla:<%=info.getIsKnow()%></p>
         
         
         <form action = "<%=request.getContextPath()%>">
