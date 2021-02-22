@@ -20,6 +20,7 @@
         <h1>Welcome to main page</h1>
         <p>My name is Dmitry Manilo</p>
         <p>My company needs new employees. Please fill out the form below and send the result for further cooperation</p>
+        <img class="picture" src="picture/schema.png" alt=""/>
         <form action="<%= request.getContextPath()%>/form" method="get">
             <input class="b1" type="submit" value="Call form"/>
         </form> 

@@ -67,6 +67,11 @@ p{
     margin: 20px;
 }
 
+.picture{
+    width: 800px;
+    height: 500px;
+}
+
 .languages{
     display: flex;
     flex-direction: column;
