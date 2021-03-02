@@ -42,7 +42,6 @@
                     <td></td>
                 </tr>
                 <%}%>
-               
                 
                 <form action="form.jsp">
                     <input type="submit">Add new Data</input>

@@ -53,7 +53,7 @@ public class Data {
         sb.append("Data{id=").append(id);
         sb.append(", name=").append(name);
         sb.append(", age=").append(age);
-        sb.append('}');
+        sb.append("}");
         return sb.toString();
     }
     

@@ -11,7 +11,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import org.obrii.mit.dp2021.manilo.javaproject1.data.Data;
-import org.obrii.mit.dp2021.manilo.javaproject1.storeHouse.StoreCrud;
+import org.obrii.mit.dp2021.manilo.javaproject1.housestore.StoreCrud;
 
 /**
  *
