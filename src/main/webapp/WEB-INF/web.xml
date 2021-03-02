@@ -4,9 +4,17 @@
         <servlet-name>FormServlet</servlet-name>
         <servlet-class>org.obrii.mit.dp2021.manilo.javaproject1.FormServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>DataServlet</servlet-name>
+        <servlet-class>org.obrii.mit.dp2021.manilo.javaproject1.servlet.DataServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>FormServlet</servlet-name>
         <url-pattern>/formServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>DataServlet</servlet-name>
+        <url-pattern>/</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
