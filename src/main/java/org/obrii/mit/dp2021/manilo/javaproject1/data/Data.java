@@ -5,11 +5,13 @@
  */
 package org.obrii.mit.dp2021.manilo.javaproject1.data;
 
+import java.io.Serializable;
+
 /**
  *
  * @author Дмитрий
  */
-public class Data {
+public class Data implements Serializable{
     private int id;
     private String name;
     private int age;
