@@ -14,15 +14,21 @@ import java.io.Serializable;
 public class Data implements Serializable{
     private int id;
     private String name;
+    private String surname;
     private int age;
+    private int stage;
+    private String hobby;
 
     public Data() {
     }
 
-    public Data(int id, String name, int age) {
+    public Data(int id, String name, String surname, int age, int stage, String hobby) {
         this.id = id;
         this.name = name;
+        this.surname = surname;
         this.age = age;
+        this.stage = stage;
+        this.hobby = hobby;
     }
 
     public int getAge() {
@@ -49,13 +55,40 @@ public class Data implements Serializable{
         this.name = name;
     }
 
+    public String getSurname() {
+        return surname;
+    }
+
+    public void setSurname(String surname) {
+        this.surname = surname;
+    }
+
+    public int getStage() {
+        return stage;
+    }
+
+    public void setStage(int stage) {
+        this.stage = stage;
+    }
+
+    public String getHobby() {
+        return hobby;
+    }
+
+    public void setHobby(String hobby) {
+        this.hobby = hobby;
+    }
+
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("Data{id=").append(id);
         sb.append(", name=").append(name);
+        sb.append(", surname=").append(surname);
         sb.append(", age=").append(age);
-        sb.append("}");
+        sb.append(", stage=").append(stage);
+        sb.append(", hobby=").append(hobby);
+        sb.append('}');
         return sb.toString();
     }
     

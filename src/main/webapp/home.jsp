@@ -25,7 +25,7 @@
                 }%>
                 <form action="<%=request.getContextPath()%>/" method="get">
                     <input name="filter" type="text" value="<%=filterString%>"/>
-                    <input type="submit" value="Filter"/>
+                    <input class="btns btnsadd" type="submit" value="Filter"/>
                 </form>
                 <h1>Data List</h1>
                 <%List<Data> dataList = (List<Data>) request.getAttribute("data");%>
@@ -34,7 +34,10 @@
                     <tr>
                         <th>id</th>
                         <th>name</th>
+                        <th>surname</th>
                         <th>age</th>
+                        <th>experience</th>
+                        <th>hobby</th>
                         <th>update</th>
                         <th>delete</th>
                     </tr>
@@ -43,19 +46,25 @@
                     <tr>
                         <td><%=datas.getId()%></td>
                         <td><%=datas.getName()%></td>
+                        <td><%=datas.getSurname()%></td>
                         <td><%=datas.getAge()%></td>
+                        <td><%=datas.getStage()%></td>
+                        <td><%=datas.getHobby()%></td>
                         <td>
                             <form action="form_update.jsp" method="post">
                                 <input type="hidden" name="id" value="<%=datas.getId()%>"/>
                                 <input type="hidden" name="name" value="<%=datas.getName()%>"/>
+                                <input type="hidden" name="surname" value="<%=datas.getSurname()%>"/>
                                 <input type="hidden" placeholder="integer" name="age" value="<%=datas.getAge()%>"/>
-                                <input type="submit" value="Update"/>
+                                <input type="hidden" placeholder="integer" name="stage" value="<%=datas.getStage()%>"/>
+                                <input class="btns" type="hidden" name="hobby" value="<%=datas.getHobby()%>"/>
+                                <input class="btns btnsupd" type="submit" value="Update"/>
                             </form>
                         </td>
                         <td>
                             <form action="<%=request.getContextPath()%>/form" method="get">
                                 <input type="hidden" name="id" value="<%=datas.getId()%>"/>
-                                <input type="submit" value="Delete"/>
+                                <input class="btns btnsdel" type="submit" value="Delete"/>
                             </form>
                         </td>
                     </tr>
@@ -63,7 +72,7 @@
                 </table>
             </div>
                 <form action="form.jsp" method="get">
-                <input type="submit" value="Add data"/>
+                <input class="btns btnsadd" type="submit" value="Add data"/>
             </form>
         </div>
     </body>

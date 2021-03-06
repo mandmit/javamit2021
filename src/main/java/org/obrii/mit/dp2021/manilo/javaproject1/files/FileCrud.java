@@ -106,9 +106,12 @@ public class FileCrud implements DataCrudInterface {
     @Override
     public void deleteData(int id) {
         List<Data> newData = new ArrayList<>();
+        int index = 0;
         for (Data d : this.readData()) {
             if (d.getId() != id) {
+                d.setId(index);
                 newData.add(d);
+                index++;
             }
         }
         this.writeData(newData);

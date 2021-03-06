@@ -21,7 +21,7 @@ import org.obrii.mit.dp2021.manilo.javaproject1.files.FileCrud;
  * @author Дмитрий
  */
 @WebServlet(name = "DataServlet", urlPatterns = {"/"})
-public class DataServlet extends HttpServlet{
+public class DataServlet extends HttpServlet {
 
     FileCrud dataCrud = new FileCrud(new File(Config.getFileName()));
 
@@ -71,8 +71,10 @@ public class DataServlet extends HttpServlet{
                 new Data(
                         Integer.parseInt(request.getParameter("id")),
                         request.getParameter("name"),
-                        Integer.parseInt(request.getParameter("age"))
-                )
+                        request.getParameter("surname"),
+                        Integer.parseInt(request.getParameter("age")),
+                        Integer.parseInt(request.getParameter("stage")),
+                        request.getParameter("hobby"))
         );
 
         doGet(request, response);
@@ -86,7 +88,10 @@ public class DataServlet extends HttpServlet{
                 new Data(
                         myId,
                         request.getParameter("name"),
-                        Integer.parseInt(request.getParameter("age"))
+                        request.getParameter("surname"),
+                        Integer.parseInt(request.getParameter("age")),
+                        Integer.parseInt(request.getParameter("stage")),
+                        request.getParameter("hobby")
                 )
         );
         doGet(request, response);

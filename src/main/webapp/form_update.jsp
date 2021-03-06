@@ -9,6 +9,8 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link rel="stylesheet" href="<%=request.getContextPath()%>/css/reset.css">
+        <link rel="stylesheet" href="<%=request.getContextPath()%>/css/styleMain.css">
         <title>Update form</title>
     </head>
     <body>
@@ -17,11 +19,16 @@
             <input type="hidden" name="id" value="<%=request.getParameter("id")%>"/>
             <p>Name:
             <input type="text" name="name" value="<%=request.getParameter("name")%>"/></p>
+            <p>Surname:
+            <input type="text" name="surname" value="<%=request.getParameter("surname")%>"/></p>
             <p>Age:
             <input type="text" placeholder="integer" name="age" value="<%=request.getParameter("age")%>"/></p>
+            <p>Experience in IT:
+            <input type="text" placeholder="integer" name="stage" value="<%=request.getParameter("stage")%>"/></p>
+            <p>Your hobby:
+            <input type="text" name="hobby" value="<%=request.getParameter("hobby")%>"/></p>
             
-            <input type="submit" value="Create data"/>
+            <input class="btns btnsadd" type="submit" value="Update data"/>
         </form>
-            <a href="<%=request.getContextPath()%>">Return</a>
     </body>
 </html>
