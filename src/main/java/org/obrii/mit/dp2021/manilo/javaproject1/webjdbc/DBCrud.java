@@ -104,9 +104,9 @@ public class DBCrud implements DataCrudInterface {
     public void updateData(int id, Data data) {
         SQL(String.format("UPDATE users "
                 + "SET name='" + data.getName() + "' , "
-                + "surname=" + data.getSurname() + " , "
+                + "surname='" + data.getSurname() + "' , "
                 + "age=" + data.getAge() + " , "
-                + "stage='" + data.getStage() + "' , "
+                + "stage=" + data.getStage() + " , "
                 + "hobby='" + data.getHobby() + "' "
                 + "WHERE id=" + id)
         );
