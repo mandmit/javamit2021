@@ -19,12 +19,8 @@
         <div class="wrapper">
             <h1>Welcome to main page</h1>
             <div>
-                <%String filterString = request.getParameter("filter");
-                if(filterString == null){
-                    filterString = "";
-                }%>
                 <form action="<%=request.getContextPath()%>/" method="get">
-                    <input name="filter" type="text" value="<%=filterString%>"/>
+                    <input name="filter" type="text"%>"/>
                     <input class="btns btnsadd" type="submit" value="Filter"/>
                 </form>
                 <h1>Data List</h1>

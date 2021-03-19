@@ -20,4 +20,12 @@ public class Config {
     public static void setFileName(String newFileName){
         fileName = newFileName;
     }
+    
+    private static final String dbURL = "jdbc:postgresql://obrii.org:5432/db2021mit21s12";
+    private static final String dbUserName = "s12";
+    private static final String dbPassword = "7854";
+
+    public static String getURL() { return dbURL; }
+    public static String getDbUser() { return dbUserName; }
+    public static String getDbPass() { return dbPassword; }
 }
