@@ -20,7 +20,7 @@
             <h1>Welcome to main page</h1>
             <div>
                 <form action="<%=request.getContextPath()%>/" method="get">
-                    <input name="filter" type="text"%>"/>
+                    <input name="filter" type="text"%>
                     <input class="btns btnsadd" type="submit" value="Filter"/>
                 </form>
                 <h1>Data List</h1>
@@ -37,8 +37,7 @@
                         <th>update</th>
                         <th>delete</th>
                     </tr>
-                    <%for (Data datas : dataList) {
-                    if(datas.getName().contains(filterString)){%>
+                    <%for (Data datas : dataList) {%>
                     <tr>
                         <td><%=datas.getId()%></td>
                         <td><%=datas.getName()%></td>
@@ -64,7 +63,7 @@
                             </form>
                         </td>
                     </tr>
-                    <%}}%>
+                    <%}%>
                 </table>
             </div>
                 <form action="form.jsp" method="get">
