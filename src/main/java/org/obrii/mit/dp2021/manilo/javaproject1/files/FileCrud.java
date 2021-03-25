@@ -42,7 +42,6 @@ public class FileCrud implements DataCrudInterface {
         this.file = file;
     }
 
-    @Override
     public void writeData(List<Data> data) {
         try (FileOutputStream fos = new FileOutputStream(file);
                 ObjectOutputStream oos = new ObjectOutputStream(fos)) {
@@ -115,5 +114,14 @@ public class FileCrud implements DataCrudInterface {
             }
         }
         this.writeData(newData);
+    }
+    
+    public List<Data> sortData(String word) {
+        List<Data> newData = new ArrayList<>();
+        for (Data d : this.readData()) {
+            if(d.getName().contains(word)){
+                newData.add(d);}
+        }
+            return newData;
     }
 }

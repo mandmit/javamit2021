@@ -78,21 +78,6 @@ public class Data implements Serializable{
     public void setHobby(String hobby) {
         this.hobby = hobby;
     }
-
-    @Override
-    public String toString() {
-        StringBuilder sb = new StringBuilder();
-        sb.append("Data{id=").append(id);
-        sb.append(", name=").append(name);
-        sb.append(", surname=").append(surname);
-        sb.append(", age=").append(age);
-        sb.append(", stage=").append(stage);
-        sb.append(", hobby=").append(hobby);
-        sb.append('}');
-        return sb.toString();
-    }
-    
-    
 }
 
 

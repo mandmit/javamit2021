@@ -67,9 +67,4 @@ public class DatabServlet extends HttpServlet {
         dbcrud.deleteData(Integer.parseInt(req.getParameter("id")));
         doGet(req, resp);
     }
-
-    @Override
-    public String getServletInfo() {
-        return "Short description";
-    }
 }

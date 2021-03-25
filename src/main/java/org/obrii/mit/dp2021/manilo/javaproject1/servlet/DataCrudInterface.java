@@ -22,5 +22,5 @@ public interface DataCrudInterface {
 
     void updateData(int id, Data data);
     
-    void writeData(List<Data> data);
+    public List<Data> sortData(String word);
 }
