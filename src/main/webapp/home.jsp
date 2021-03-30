@@ -28,7 +28,6 @@
 
                 <table>
                     <tr>
-                        <th>id</th>
                         <th>name</th>
                         <th>surname</th>
                         <th>age</th>
@@ -39,7 +38,6 @@
                     </tr>
                     <%for (Data datas : dataList) {%>
                     <tr>
-                        <td><%=datas.getId()%></td>
                         <td><%=datas.getName()%></td>
                         <td><%=datas.getSurname()%></td>
                         <td><%=datas.getAge()%></td>

@@ -42,14 +42,6 @@ public class DBCrud implements DataCrudInterface {
             System.err.println(e.getClass().getName() + ": " + e.getMessage());
             System.exit(0);
         }
-        SQL("CREATE TABLE IF NOT EXISTS users ("
-                + "id integer primary key not null, "
-                + "name text not null, "
-                + "surname text not null, "
-                + "age integer not null, "
-                + "stage integer not null, "
-                + "hobby text not null "
-                + ");");
     }
 
     private void SQL(String sql) {
@@ -63,7 +55,6 @@ public class DBCrud implements DataCrudInterface {
 
     @Override
     public List<Data> readData() {
-        int cnt = 0;
         try {
             ResultSet result = this.statement.executeQuery("SELECT * FROM users");
             List<Data> data = new ArrayList<>();
@@ -77,10 +68,6 @@ public class DBCrud implements DataCrudInterface {
                         result.getInt("stage"),
                         result.getString("hobby")
                 ));
-                cnt++;
-            }
-            if(cnt == 0){
-                id = 1;
             }
 
             return data;
@@ -94,8 +81,8 @@ public class DBCrud implements DataCrudInterface {
     @Override
     public void createData(Data data) {
         data.setId(id);
-        SQL(String.format("INSERT INTO users (id, name, surname, age, stage, hobby) VALUES (%d, '%s', '%s', %d, %d, '%s');",
-                data.getId(), data.getName(), data.getSurname(), data.getAge(), data.getStage(), data.getHobby()));
+        SQL(String.format("INSERT INTO users (name, surname, age, stage, hobby) VALUES ('%s', '%s', %d, %d, '%s');",
+                data.getName(), data.getSurname(), data.getAge(), data.getStage(), data.getHobby()));
         id++;
     }
 

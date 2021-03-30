@@ -30,6 +30,14 @@ public class Data implements Serializable{
         this.stage = stage;
         this.hobby = hobby;
     }
+    
+    public Data(String name, String surname, int age, int stage, String hobby) {
+        this.name = name;
+        this.surname = surname;
+        this.age = age;
+        this.stage = stage;
+        this.hobby = hobby;
+    }
 
     public int getAge() {
         return age;
