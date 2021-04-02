@@ -3,35 +3,33 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package org.obrii.mit.dp2021.manilo.javaproject1.data;
+package org.obrii.mit.dp2021.manilo.javaproject1.springCrud;
 
 import java.io.Serializable;
+import javax.persistence.*;
 
 /**
  *
  * @author Дмитрий
  */
-public class Data implements Serializable{
+@Entity
+public class Users implements Serializable {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
+    
     private String name;
     private String surname;
     private int age;
     private int stage;
     private String hobby;
 
-    public Data() {
+    public Users() {
     }
 
-    public Data(int id, String name, String surname, int age, int stage, String hobby) {
+    public Users(int id, String name, String surname, int age, int stage, String hobby) {
         this.id = id;
-        this.name = name;
-        this.surname = surname;
-        this.age = age;
-        this.stage = stage;
-        this.hobby = hobby;
-    }
-    
-    public Data(String name, String surname, int age, int stage, String hobby) {
         this.name = name;
         this.surname = surname;
         this.age = age;
@@ -87,5 +85,3 @@ public class Data implements Serializable{
         this.hobby = hobby;
     }
 }
-
-

@@ -5,14 +5,14 @@
 --%>
 
 <%@page import="java.util.List"%>
-<%@page import="org.obrii.mit.dp2021.manilo.javaproject1.data.Data"%>
+<%@page import="org.obrii.mit.dp2021.manilo.javaproject1.springCrud.Users"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <link rel="stylesheet" href="<%=request.getContextPath()%>/css/reset.css">
-        <link rel="stylesheet" href="<%=request.getContextPath()%>/css/styleMain.css">
+        <link rel="stylesheet" href="<%=request.getContextPath()%>/resources/css/reset.css">
+        <link rel="stylesheet" href="<%=request.getContextPath()%>/resources/css/styleMain.css">
         <title>Manilo Dmytro</title>
     </head>
     <body>
@@ -24,7 +24,7 @@
                     <input class="btns btnsadd" type="submit" value="Filter"/>
                 </form>
                 <h1>Data List</h1>
-                <%List<Data> dataList = (List<Data>) request.getAttribute("data");%>
+                <%List<Users> dataList = (List<Users>) request.getAttribute("data");%>
 
                 <table>
                     <tr>
@@ -36,7 +36,7 @@
                         <th>update</th>
                         <th>delete</th>
                     </tr>
-                    <%for (Data datas : dataList) {%>
+                    <%for (Users datas : dataList) {%>
                     <tr>
                         <td><%=datas.getName()%></td>
                         <td><%=datas.getSurname()%></td>

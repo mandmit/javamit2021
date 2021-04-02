@@ -9,8 +9,8 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <link rel="stylesheet" href="<%=request.getContextPath()%>/css/reset.css">
-        <link rel="stylesheet" href="<%=request.getContextPath()%>/css/styleMain.css">
+        <link rel="stylesheet" href="<%=request.getContextPath()%>/resources/css/reset.css">
+        <link rel="stylesheet" href="<%=request.getContextPath()%>/resources/css/styleMain.css">
         <title>Insert form</title>
     </head>
     <body>
