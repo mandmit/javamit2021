@@ -19,7 +19,7 @@ import org.springframework.web.client.RestTemplate;
 @Controller
 public class MessageController {
 
-    private final String URL = "http://localhost:8090/student";
+    private final String URL = "http://localhost:8090/RestService-0.0.1-SNAPSHOT/student";
 
     @Autowired
     RestTemplate restTemplate;
